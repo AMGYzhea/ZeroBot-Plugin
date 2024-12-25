@@ -147,7 +147,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ymgal"            // 月幕galgame
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/yujn"             // 遇见API
 
-	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"           // 鬼东西
+	 _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"           // 鬼东西
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -171,7 +171,7 @@ import (
 
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/thesaurus" // 词典匹配回复
 
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/breakrepeat" // 打断复读
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/breakrepeat" // 打断复读
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -218,7 +218,7 @@ func init() {
 	// 直接写死 URL 时，请更改下面第二个参数
 	url := flag.String("u", "ws://127.0.0.1:6700", "Set Url of WSClient.")
 	// 默认昵称
-	adana := flag.String("n", "椛椛", "Set default nickname.")
+	adana := flag.String("n", "能猫", "Set default nickname.")
 	prefix := flag.String("p", "/", "Set command prefix.")
 	runcfg := flag.String("c", "", "Run from config file.")
 	save := flag.String("s", "", "Save default config to file and exit.")
@@ -251,7 +251,7 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	// sus = append(sus, 12345678)
+	 sus = append(sus, 3079709365)
 	// sus = append(sus, 87654321)
 
 	// 启用 webui
@@ -310,9 +310,9 @@ func main() {
 		rand.Seed(time.Now().UnixNano()) //nolint: staticcheck
 	}
 	// 帮助
-	zero.OnFullMatchGroup([]string{"help", "/help", ".help", "菜单"}, zero.OnlyToMe).SetBlock(true).
+	zero.OnFullMatchGroup([]string{"help", "/help", ".help", "菜单", "帮助", "功能"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(message.Text(banner.Banner, "\n管理发送\"/服务列表\"查看 bot 功能\n发送\"/用法name\"查看功能用法"))
+			ctx.SendChain(message.Text(banner.Banner, "\n能猫所有功能请查看Zhea的能猫教程网"))
 		})
 	zero.OnFullMatch("查看zbp公告", zero.OnlyToMe, zero.AdminPermission).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
