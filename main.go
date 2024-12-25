@@ -147,7 +147,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ymgal"            // 月幕galgame
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/yujn"             // 遇见API
 
-	 _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"           // 鬼东西
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf" // 鬼东西
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -171,7 +171,7 @@ import (
 
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/thesaurus" // 词典匹配回复
 
-	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/breakrepeat" // 打断复读
+	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/breakrepeat" // 打断复读
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -251,7 +251,7 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	 sus = append(sus, 3079709365)
+	sus = append(sus, 3079709365)
 	// sus = append(sus, 87654321)
 
 	// 启用 webui
